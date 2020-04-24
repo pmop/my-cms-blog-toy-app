@@ -1,0 +1,29 @@
+h1 Listing posts
+
+style tr { margin: 2px; }
+
+table.table.is-striped
+  thead
+    tr
+      th User
+      th Title
+      th Tags
+      th Permalink
+      th
+      th
+      th
+
+  tbody
+    - @posts.each do |post|
+      tr
+        td = post.user.name
+        td = post.title
+        td = post.tags.map { |tag| tag.name }
+        td = post.permalink
+        td = link_to 'Show', post
+        td = link_to 'Edit', edit_post_path(post)
+        td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Post', new_post_path

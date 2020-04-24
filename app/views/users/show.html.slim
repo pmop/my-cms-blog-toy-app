@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong Emal:
+  = @user.emal
+p
+  strong Name:
+  = @user.name
+p
+  strong Password digest:
+  = @user.password_digest
+p
+  strong Posts:
+  = @user.posts
+
+=> link_to 'Edit', edit_user_path(@user)
+'|
+=< link_to 'Back', users_path

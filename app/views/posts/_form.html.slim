@@ -1,0 +1,7 @@
+= simple_form_for(@post) do |f|
+  .form-inputs
+    = f.input :title, id: 'article-title'
+    = f.rich_text_area :content, id: 'article-content'
+
+  .form-actions
+    = f.button :submit, class: 'button is-primary is-small'
