@@ -18,3 +18,6 @@ Rails 6.
 
 ### Editing Posts, supports tags
 ![Image of the editing post page](https://raw.githubusercontent.com/pmop/my-cms-blog-toy-app/blob/.screenshots/c.png)
+
+### Author profile with avatar support
+![Image of the editing post page](https://raw.githubusercontent.com/pmop/my-cms-blog-toy-app/blob/.screenshots/d.png)
