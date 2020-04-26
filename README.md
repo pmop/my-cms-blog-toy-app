@@ -1,24 +1,9 @@
-# README
+# Simple CMS
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple CMS built on Ruby on Rails with support for rich text editing with Trix Editor/Active Text (Rails 6). **[Toy Project]**.
 
-Things you may want to cover:
+Also supports authentication with Devise.
 
-* Ruby version
+Ruby 2.6.6
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Rails 6.
