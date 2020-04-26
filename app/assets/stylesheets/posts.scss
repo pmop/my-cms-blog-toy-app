@@ -1,6 +1,7 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import 'bulma';
 
 #article-content {
   height: 60vh !important;
@@ -8,10 +9,12 @@
   overflow: scroll;
   overflow-y: auto;
 }
-main {
-	padding: 1rem;
-}
 
 .form-actions {
 	padding-top: 4px;
+}
+
+.tags {
+	padding: 1rem;
+	border-radius: $box-radius;
 }

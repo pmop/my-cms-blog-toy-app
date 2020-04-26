@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @user = User.new
+    # TODO optimize queries
+    @posts = Post.all
   end
 end

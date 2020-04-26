@@ -66,4 +66,4 @@ gem 'slim', '~> 4.0', '>= 4.0.1'
 
 gem 'slim-rails', '~> 3.2'
 
-gem 'image_processing'
+gem 'image_processing', '~> 1.10', '>= 1.10.3'

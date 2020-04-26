@@ -1548,6 +1548,11 @@ builtin-status-codes@^3.0.0:
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
   integrity sha1-hZgoeOIbmOHGZCXgPQF0eI9Wnug=
 
+bulma-tagsinput@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/bulma-tagsinput/-/bulma-tagsinput-2.0.0.tgz#ef6653464212f23a50b3b046fc9735bd75fc1768"
+  integrity sha512-BFvd0oaxgeWHOEh3d4cgETy5vpSSjRRBA9w+8TWEuhjFQg38Rb+3vjDCavL+udpdjf+dRV0SK5T4kYCXTOrz5A==
+
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
@@ -3992,6 +3997,11 @@ last-call-webpack-plugin@^3.0.0:
   dependencies:
     lodash "^4.17.5"
     webpack-sources "^1.1.0"
+
+lazysizes@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.2.0.tgz#352c2f095e1528b190f61178c140522dcf9ffce4"
+  integrity sha512-931KnHwsdCm7U7/S0GDj6FSkPvQ3ugGw65J5Plp2Mq1gBTPl9VShU+cIIX6uRr+dit+APDLmvx1FwjDll5bHLQ==
 
 lcid@^1.0.0:
   version "1.0.0"

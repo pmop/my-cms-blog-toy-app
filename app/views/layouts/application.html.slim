@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title BlogApp
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    script type='text/javascript' src="https://cdn.jsdelivr.net/npm/bulma-tagsinput@2.0.0/dist/js/bulma-tagsinput.min.js"
+  body
+    - if user_signed_in?
+      = render 'layouts/navbar'
+    == yield

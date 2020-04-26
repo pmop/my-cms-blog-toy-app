@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_24_030147) do
+ActiveRecord::Schema.define(version: 2020_04_26_041125) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -80,6 +80,14 @@ ActiveRecord::Schema.define(version: 2020_04_24_030147) do
     t.index ["post_id", "tag_id"], name: "index_posts_tags_on_post_id_and_tag_id"
     t.index ["post_id"], name: "index_posts_tags_on_post_id"
     t.index ["tag_id"], name: "index_posts_tags_on_tag_id"
+  end
+
+  create_table "posts_users", id: false, force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.integer "user_id", null: false
+    t.index ["post_id", "user_id"], name: "index_posts_users_on_post_id_and_user_id"
+    t.index ["post_id"], name: "index_posts_users_on_post_id"
+    t.index ["user_id"], name: "index_posts_users_on_user_id"
   end
 
   create_table "tags", force: :cascade do |t|

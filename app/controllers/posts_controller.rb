@@ -84,11 +84,12 @@ class PostsController < ApplicationController
     end
 
     def generate_permalink_from_title(title)
-      title
+      t = title
         .downcase
         .gsub(/[^a-z]/,'')
         .gsub(/\s+/, '_')
-        + SecureRandom.hex(8).to_s
+
+      t + SecureRandom.hex(4).to_s
     end
 
     # Only allow a list of trusted parameters through.

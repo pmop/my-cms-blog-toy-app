@@ -1,27 +1,35 @@
-h1 Listing users
+.hero.is-fullheight.is-fullwidth.is-primary
+  .hero-body
+    section.section
+      .container.is-fluid
+        .panel style='background-color: white;'
+          .panel-heading Listing
+          table.table.is-hoverable.is-fullwidth
+            thead
+              tr
+                th Email
+                th Name
+                th Posts
+                th
+                th
+                th
 
-table
-  thead
-    tr
-      th Emal
-      th Name
-      th Password digest
-      th Posts
-      th
-      th
-      th
+            tbody
+              - @users.each do |user|
+                tr
+                  td = user.email
+                  td = user.name
+                  td TODO user.posts.length
+                  td
+                    .field.has-addons
+                      = link_to 'Show', user, class:'control button is-small'
+                      = link_to 'Edit', edit_user_registration_path(user), class:'control button is-small'
 
-  tbody
-    - @users.each do |user|
-      tr
-        td = user.email
-        td = user.name
-        td = user.password_digest
-        td = user.posts
-        td = link_to 'Show', user
-        td = link_to 'Edit', edit_user_path(user)
-        td = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete
+                      = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete, class:'control button is-small is-danger'
+                  td
+                  td
 
-br
+          hr
+          .panel-block
+            h1 Back
 
-= link_to 'New User', new_user_path

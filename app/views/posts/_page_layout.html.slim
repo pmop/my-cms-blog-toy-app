@@ -1,0 +1,30 @@
+p#notice = notice
+
+=> link_to 'Edit', edit_post_path(@post)
+'|
+=< link_to 'Back', posts_path
+
+section.section
+  .container.is-fluid
+    .hero.is-fullwidth
+      .hero-body
+        .columns
+          .column.is-two-fifths
+            .columns
+              .column
+                .media
+                .img-placeholder
+                h3 = @post.user.name
+            .column.is-four-fifths
+
+    nav.navbar
+      .navbar-end
+        p Tags:
+        .tags
+          - @post.tags.each do |tag|
+              span.tag.is-link.is-rounded = tag.name
+
+    h1.title = @post.title
+    hr
+    == @post.content
+

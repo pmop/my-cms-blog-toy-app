@@ -1,29 +1,38 @@
-h1 Listing posts
+.hero.is-fullheight.is-fullwidth.is-primary
+  .hero-body
+    section.section
+      .container.is-fluid
+        .panel style='background-color: white;'
+          .panel-heading Listing posts
+          table.table.is-hoverable.is-fullwidth
+            thead
+              tr
+                th User
+                th Title
+                th Tags
+                th Permalink
+                th
+                th
+                th
 
-style tr { margin: 2px; }
+            tbody
+              - @posts.each do |post|
+                tr
+                  td = post.user.name
+                  td = post.title
+                  td
+                    - post.tags.each do |tag|
+                        .tag.is-link.is-rounded = tag.name
+                  td = post.permalink
+                  td
+                    .field.has-addons
+                      = link_to 'Show', post, class:'control button is-small '
+                      = link_to 'Edit', edit_post_path(post), class:'control button is-small '
 
-table.table.is-striped
-  thead
-    tr
-      th User
-      th Title
-      th Tags
-      th Permalink
-      th
-      th
-      th
+                      = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete, class:'control button is-danger is-small '
+                  td
+                  td
 
-  tbody
-    - @posts.each do |post|
-      tr
-        td = post.user.name
-        td = post.title
-        td = post.tags.map { |tag| tag.name }
-        td = post.permalink
-        td = link_to 'Show', post
-        td = link_to 'Edit', edit_post_path(post)
-        td = link_to 'Destroy', post, data: { confirm: 'Are you sure?' }, method: :delete
-
-br
-
-= link_to 'New Post', new_post_path
+          hr
+          .panel-block
+            = link_to 'New Post', new_post_path, class: 'button is-primary'
