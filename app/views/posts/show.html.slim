@@ -1,29 +1,22 @@
-.hero.is-fullwidth.is.full-height
-  .hero-head
-  .hero-body
-    section.section
-      .container.is-fluid
-        .columns.is-centered
-          .column.is-7.box
-            .tags
-              - @post.tags.each do |tag|
-                  span.tag.is-link.is-rounded = tag.name
-
-            h1.title = @post.title
+/ css:
+  .trix-content > div > a:hover {
+	background-color: transparent;
+    color: teal;
+	border-bottom: 2px solid teal;
+  }
+section.section
+  .container.is-fluid
+    .columns.is-centered
+      .column.is-full-mobile.is-9-desktop
+        .container.is-post
+          - cache @post do
+            .listing-header
+              h1.title.is-1 = @post.title
+              == render partial: 'tags/post_header', locals: { tags: @post.tags }
+            span
+              span.subtitle Written by&nbsp;
+              span.subtitle.author #{@post.user.name}&nbsp;
+              span.subtitle on #{@post.created_at.strftime("%d %B, %Y")}
             hr
             == @post.content
-            .columns style='margin-top: 1in;'
-    .hero-foot
-      .columns.is-centered
-        div class='column
-                columns
-                is-5-tablet
-                is-4-desktop
-                is-4-widescreen
-                box hero'
-          = user_avatar(@post.user)
-          .column.is-two-fifth style='display: flex; flex-direction: column-reverse;'
-            .is-size-6
-              = content_tag(:h1, "Author: #{@post.user.name}")
-
 
